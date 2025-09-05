@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="main-heading-decoration">Minimum Spanning Tree</h1>
+    <div class="card">
+        <ul>
+            <div class="text-decoration">
+                <li>
+                    <button class="btn btn-info text-decoration">No of Edges = No. of Vertices - 1</button>
+                </li>
+                <li>No cycle exist for spanning trees.</li>
+                <li>For Complete graph(K<sub>n</sub>):<br /><button class="btn btn-secondary text-decoration">No. of
+                        Minimum Spanning Trees = n<sup>n-2</sup></button></li>
+            </div>
+        </ul>
+        <h1 class="heading-decoration">Algorithms:</h1>
+        <ul>
+            <div style="margin-left:5%; font-size: 30px;">
+                <li>Krushkal's Algorithm</li>
+                <li> prim's Algorithm</li>
+            </div>
+        </ul>
+        <h1 class="heading-decoration" style="margin-left:1%">Krushkal's Algorithm:</h1>
+        <div style="margin-left:10%;">
+            <h1>Time Complexity :</h1>
+            <div class="centering-2">
+                <button class="box-2">&Theta;(ElogE)</button>
+            </div>
+            <h1>Space Complexity :</h1>
+            <div class="centering-2">
+                <button class="box-2">&Theta;(V + E)</button>
+            </div>
+        </div>
+        <img src="C:\Users\mogan\OneDrive\Desktop\GATE Topics\Algorithm\Greedy Approach\Minimum Spanning Tree\images\Screenshot 2025-09-05 074738.png"
+            class="image" />
+        <div class="centering-2">
+            <div id="res1">
+                <p></p>
+            </div>
+        </div>
+        <h1 class="heading-decoration" style="margin-left:1%">Prims's Algorithm:</h1>
+        <div style="margin-left:10%;">
+            <h1>Time Complexity :</h1>
+            <div class="centering-2">
+                <button class="box-2">&Theta;(V<sup>2</sup>)</button>
+            </div>
+            <h1>Space Complexity :</h1>
+            <div class="centering-2">
+                <button class="box-2">&Theta;(V + E)</button>
+            </div>
+        </div>
+        <img src="C:\Users\mogan\OneDrive\Desktop\GATE Topics\Algorithm\Greedy Approach\Minimum Spanning Tree\images\Screenshot 2025-09-05 123417.png"
+            class="image" />
+        <div class="single-table-measure">
+            <table class="table table-bordered mt-3">
+                <thead class="thead-light">
+                    <tr>
+                        <th style="text-align: center;">vertex</th>
+                        <th style="text-align: center;">Values</th>
+                        <th style="text-align: center;">After Selection</th>
+                        <th style="text-align: center;">Direction</th>
+                        <th style="text-align: center;">Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;">F</td>
+                        <td style="text-align: center;">(3,6,11,10)</td>
+                        <td style="text-align: center;">(6,11,10)</td>
+                        <td style="text-align: center;">F->G</td>
+                        <td style="text-align: center;">3</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">F,G</td>
+                        <td style="text-align: center;">(4,5,6,8,10,11)</td>
+                        <td style="text-align: center;">(5,6,8,10,11)</td>
+                        <td style="text-align: center;">F->G->E</td>
+                        <td style="text-align: center;">4</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">F,G,E</td>
+                        <td style="text-align: center;">(1,5,6,8,10,11)</td>
+                        <td style="text-align: center;">(5,6,8,10,11)</td>
+                        <td style="text-align: center;">F->G->E->A</td>
+                        <td style="text-align: center;">1</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">F,G,E,A</td>
+                        <td style="text-align: center;">(2,5,6,8,10,11)</td>
+                        <td style="text-align: center;">(5,6,8,10,11)</td>
+                        <td style="text-align: center;">F->G->E->A->C</td>
+                        <td style="text-align: center;">2</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">F,G,E,A,C</td>
+                        <td style="text-align: center;">(5,6,7,8,10,11)</td>
+                        <td style="text-align: center;">(6,7,8,10,11)</td>
+                        <td style="text-align: center;">F->G->E->A->C->H</td>
+                        <td style="text-align: center;">5</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">F,G,E,A,C,H</td>
+                        <td style="text-align: center;">(6,7,8,10,11,60)</td>
+                        <td style="text-align: center;">(8,10,11,60)</td>
+                        <td style="text-align: center;">F->G->E->A->C->H->B</td>
+                        <td style="text-align: center;">7</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">F,G,E,A,C,H,B</td>
+                        <td style="text-align: center;">(8,10,11,17,60)</td>
+                        <td style="text-align: center;">(10,11,60)</td>
+                        <td style="text-align: center;">F->G->E->A->C->H->B->D</td>
+                        <td style="text-align: center;">10</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="centering">
+                            <button class="btn btn-info">Total Cost = 3 + 4 + 1 + 2 + 5 + 7 + 10</button>
+            <br/>
+            <button class="btn btn-secondary mt-3">Total Cost = 32</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="d-flex flex-row justify-content-between">
+        <a href="https://shyam044.github.io/Huffman-Code/" class="btn btn-danger"
+            style="height:35px; margin-bottom:20px;">Prev</a>
+        <div class="embed-responsive embed-responsive-16by9" style="height:25vh; width:25vw;">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6URZled_57U?rel=0"
+                allowfullscreen></iframe>
+        </div>
+        <a href="" class="btn btn-primary" style="height:35px;">Next</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

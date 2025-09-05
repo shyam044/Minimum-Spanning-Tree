@@ -1,0 +1,89 @@
+.main-heading-decoration{
+    text-decoration: underline;
+    color:green;
+    text-align:center;
+    font-size:50px;
+    font-weight:bold;
+}
+.heading-decoration{
+    text-decoration:underline;
+    color:blue;
+    font-size:40px;
+    padding:40px;
+}
+.example-decoration
+{
+    text-decoration:underline;
+    color:violet;
+    font-size:40px;
+    margin-left:40px;
+}
+.text-decoration{
+  font-size:30px;
+  padding:10px;
+
+}
+.box{
+    border-width:10px;
+    font-size:40px;
+}
+.centering 
+{
+    text-align:center;
+    font-size:30px;
+}
+.centering-2
+{
+    margin-left: 15vw;
+    font-size:30px;
+}
+.margining
+{
+    margin-left:5vw;
+    font-size:30px;
+}
+.card
+{
+    background-color:azure;
+}
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+.table-measure {
+    width: 100%; /* Allow flex to control width */
+    margin: 0 auto;
+    padding: 10px;
+    font-size:20px;
+}
+.single-table-measure {
+    width: 50vw;
+    margin-left:25vw;
+}
+.margining-table
+{
+  margin-left:10vw;
+}
+.image{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 40px;
+}
+.box-2
+{
+    background-color:pink;
+    border-width:10px;
+    font-size:40px;
+}
